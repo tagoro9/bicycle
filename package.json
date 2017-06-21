@@ -1,0 +1,43 @@
+{
+  "name": "bicycle",
+  "version": "0.0.1",
+  "description": "Project to learn and experiment with cycle.js",
+  "main": "src/index.js",
+  "author": "Victor Mora",
+  "license": "MIT",
+  "scripts": {
+    "precommit": "lint-staged",
+    "lint": "eslint src",
+    "start": "webpack-dev-server --inline"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.2",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-config-prettier": "^2.2.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.1",
+    "eslint-plugin-react": "^7.0.1",
+    "husky": "^0.13.4",
+    "lint-staged": "^3.6.1",
+    "prettier": "^1.4.4",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "@cycle/dom": "^17.4.0",
+    "@cycle/run": "^3.1.0",
+    "ramda": "^0.24.1",
+    "xstream": "^10.8.0"
+  }
+}
